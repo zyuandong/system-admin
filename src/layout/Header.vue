@@ -62,8 +62,8 @@ export default defineComponent({
   height: 0.6rem;
   line-height: 0.6rem;
   color: #fff;
-  background-color: var(--primary);
-  background-image: url('../assets/svg/bg_header.svg');
+  background-color: #409eff;
+
   padding: 0 0.32rem;
   position: sticky;
   top: 0;

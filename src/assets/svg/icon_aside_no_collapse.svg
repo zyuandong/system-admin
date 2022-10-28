@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="8" height="160" viewBox="0 0 8 160">
-  <g id="组_87" data-name="组 87" transform="translate(-208 -352)">
-    <path id="BG_fill" data-name="BG/fill" d="M0,0,8,16V144L0,160Z" transform="translate(208 352)" fill="#1890ff" opacity="0.3"/>
-    <path id="Combined_Shape" data-name="Combined Shape" d="M5,4a.617.617,0,0,1-.324-.08.367.367,0,0,1-.1-.092L.12.521A.247.247,0,0,1,.155.08.641.641,0,0,1,.815.1L5,3.211,9.186.1A.641.641,0,0,1,9.845.08.248.248,0,0,1,9.88.521L5.429,3.827a.367.367,0,0,1-.1.092A.614.614,0,0,1,5.011,4Z" transform="translate(210 437) rotate(-90)" fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
-  </g>
-</svg>
