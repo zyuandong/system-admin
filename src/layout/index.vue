@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from 'vue-demi';
+import { defineComponent } from 'vue';
 import HeaderLayout from './Header.vue';
 
 export default defineComponent({
