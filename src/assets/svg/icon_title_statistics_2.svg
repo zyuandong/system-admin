@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="198" height="81" viewBox="0 0 198 81">
+  <defs>
+    <filter id="椭圆_356">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-color="#ffa200" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="椭圆_357">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur-2"/>
+      <feFlood flood-color="#1890ff" result="color-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color-2"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="椭圆_358">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-3"/>
+      <feFlood flood-color="#b471e5" result="color-3"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-3"/>
+      <feComposite operator="in" in="color-3"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="组_1080" data-name="组 1080" transform="translate(-238 -244)">
+    <g data-type="innerShadowGroup">
+      <g transform="matrix(1, 0, 0, 1, 238, 244)" filter="url(#椭圆_356)">
+        <ellipse id="椭圆_356-2" data-name="椭圆 356" cx="99" cy="40.5" rx="99" ry="40.5" fill="#fff" opacity="0.3"/>
+      </g>
+      <g id="椭圆_356-3" data-name="椭圆 356" transform="translate(238 244)" fill="none" stroke="#ffa200" stroke-width="1" opacity="0.3">
+        <ellipse cx="99" cy="40.5" rx="99" ry="40.5" stroke="none"/>
+        <ellipse cx="99" cy="40.5" rx="98.5" ry="40" fill="none"/>
+      </g>
+    </g>
+    <g data-type="innerShadowGroup">
+      <g transform="matrix(1, 0, 0, 1, 238, 244)" filter="url(#椭圆_357)">
+        <ellipse id="椭圆_357-2" data-name="椭圆 357" cx="66" cy="29" rx="66" ry="29" transform="translate(33 11)" fill="#fff"/>
+      </g>
+      <g id="椭圆_357-3" data-name="椭圆 357" transform="translate(271 255)" fill="none" stroke="#1890ff" stroke-width="1">
+        <ellipse cx="66" cy="29" rx="66" ry="29" stroke="none"/>
+        <ellipse cx="66" cy="29" rx="65.5" ry="28.5" fill="none"/>
+      </g>
+    </g>
+    <g data-type="innerShadowGroup">
+      <g transform="matrix(1, 0, 0, 1, 238, 244)" filter="url(#椭圆_358)">
+        <ellipse id="椭圆_358-2" data-name="椭圆 358" cx="36" cy="19" rx="36" ry="19" transform="translate(63 22)" fill="#fff" opacity="0.6"/>
+      </g>
+      <g id="椭圆_358-3" data-name="椭圆 358" transform="translate(301 266)" fill="none" stroke="#b471e5" stroke-width="1" opacity="0.6">
+        <ellipse cx="36" cy="19" rx="36" ry="19" stroke="none"/>
+        <ellipse cx="36" cy="19" rx="35.5" ry="18.5" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

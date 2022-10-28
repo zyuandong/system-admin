@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="60"
+  viewBox="0 0 1920 60">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="矩形_888" data-name="矩形 888" width="1920" height="60" fill="#2771f1" />
+    </clipPath>
+    <linearGradient id="linear-gradient" y1="0.579" x2="0.938" y2="0.579" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2865e3" />
+      <stop offset="1" stop-color="#1890ff" />
+    </linearGradient>
+    <filter id="路径_677" x="1531.592" y="-27.046" width="412.516" height="133.158" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha" />
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feFlood flood-color="#3eb3d3" flood-opacity="0.322" />
+      <feComposite operator="in" in2="blur" />
+      <feComposite in="SourceGraphic" />
+    </filter>
+    <filter id="路径_678" x="1378.177" y="-38.302" width="331.417" height="141.562" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha" />
+      <feGaussianBlur stdDeviation="2" result="blur-2" />
+      <feFlood flood-color="#3eb3d3" flood-opacity="0.322" />
+      <feComposite operator="in" in2="blur-2" />
+      <feComposite in="SourceGraphic" />
+    </filter>
+    <filter id="路径_676" x="944.95" y="-26.157" width="485.47" height="112.264" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha" />
+      <feGaussianBlur stdDeviation="2" result="blur-3" />
+      <feFlood flood-color="#3eb3d3" flood-opacity="0.322" />
+      <feComposite operator="in" in2="blur-3" />
+      <feComposite in="SourceGraphic" />
+    </filter>
+    <filter id="路径_675" x="553.707" y="-36.428" width="692.014" height="130.284" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha" />
+      <feGaussianBlur stdDeviation="2" result="blur-4" />
+      <feFlood flood-color="#3eb3d3" flood-opacity="0.322" />
+      <feComposite operator="in" in2="blur-4" />
+      <feComposite in="SourceGraphic" />
+    </filter>
+    <linearGradient id="linear-gradient-5" x1="0.409" y1="0.5" x2="1.13" y2="0.5" xlink:href="#linear-gradient" />
+    <filter id="联合_56" x="-6.001" y="-45.323" width="730.959" height="131.378" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha" />
+      <feGaussianBlur stdDeviation="2" result="blur-5" />
+      <feFlood flood-color="#3eb3d3" flood-opacity="0.322" />
+      <feComposite operator="in" in2="blur-5" />
+      <feComposite in="SourceGraphic" />
+    </filter>
+  </defs>
+  <g id="导航栏背景" transform="translate(0 -206)">
+    <g id="header" transform="translate(0 206)">
+      <rect id="矩形_887" data-name="矩形 887" width="1920" height="60" fill="#2865e3" />
+      <g id="蒙版组_37" data-name="蒙版组 37" clip-path="url(#clip-path)">
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#路径_677)">
+          <path id="路径_677-2" data-name="路径 677"
+            d="M-13862.242,1348.055s36.773,38.888,4.953,68.954-94.072,28.906-128.219,37.193-66.869,0-66.869,0l-192.465-25.363,35.67-92.112Z"
+            transform="translate(15782.43 -1359.77)" opacity="0.702" fill="url(#linear-gradient)" />
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#路径_678)">
+          <path id="路径_678-2" data-name="路径 678"
+            d="M177.657,90.136S148.594,63.042,197.1,35.824,309.863,6.509,309.863,6.509L2.664-.039-1.782,102.753Z"
+            transform="matrix(1, 0.09, -0.09, 1, 1394.91, -34.11)" opacity="0.702" fill="url(#linear-gradient)" />
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#路径_676)">
+          <path id="路径_676-2" data-name="路径 676"
+            d="M-13897.79,1341.434s3.5,43.31-24.865,61.479-87.811,19.8-109.875,28.085-91.4,5.566-91.4,5.566l-247.191-8.436v-91.4Z"
+            transform="translate(15322.07 -1358.88)" opacity="0.702" fill="url(#linear-gradient)" />
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#路径_675)">
+          <path id="路径_675-2" data-name="路径 675"
+            d="M-13681.732,1443.306s-14.574-62.632,60.633-64.429,50.906,20.942,127.918,21.512,83.08-66.481,83.08-66.481l-675.143-3.308-4.871,118.284Z"
+            transform="translate(14649.82 -1363.03)" opacity="0.702" fill="url(#linear-gradient)" />
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#联合_56)">
+          <path id="联合_56-2" data-name="联合 56"
+            d="M-12692.266-9226.379l-137.617-14.59H-13159v-60h238.625l6.515-41.324,473.819,29.365s-.39,44.94-77.747,49.1-63.4,31.3-85.878,38.061c-7.064,2.125-18.449,2.854-30.729,2.854C-12661.186-9222.913-12692.266-9226.379-12692.266-9226.379Z"
+            transform="translate(13159 9300.97)" opacity="0.702" fill="url(#linear-gradient-5)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
