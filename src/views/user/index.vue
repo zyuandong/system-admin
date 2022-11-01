@@ -81,7 +81,7 @@ export default defineComponent({
         tableData.value = res.data.users;
       });
     };
-    const handleDelete = (row: any) => {
+    const handleDelete = (row: User) => {
       ElMessageBox.confirm('删除?', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
