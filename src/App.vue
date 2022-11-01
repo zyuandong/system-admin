@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ElConfigProvider } from 'element-plus';
 import Layout from './layout/index.vue';
 </script>
 
