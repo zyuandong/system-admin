@@ -41,6 +41,7 @@
       :form="form"
       :getTableData="getTableData"
       :isEdit="isEdit"
+      class="test"
     />
   </div>
 </template>
@@ -142,6 +143,9 @@ export default defineComponent({
     .table-container {
       margin: 0.16rem;
     }
+  }
+  .test {
+    background-color: aqua;
   }
 }
 </style>
