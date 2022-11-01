@@ -1,5 +1,6 @@
 import axios from 'axios';
 import mockAdapter from 'axios-mock-adapter';
+import {useStore} from '@/store/index';
 
 // This sets the mock adapter on the default instance
 const mock = new mockAdapter(axios);
@@ -10,6 +11,13 @@ interface user  {
   id:number,
   name:string
   address:string
+}
+
+interface Goods {
+  id:number,
+  name:string,
+  price:number,
+  number:number
 }
 
 let users: user[]=[ 
@@ -79,6 +87,39 @@ mock.onGet('/user/remove').reply(config => {
       resolve([200, {
         code: 200,
         msg: '删除成功'
+      }]);
+    }, 500);
+  });
+});
+
+
+const goods: Goods[]=[ 
+  { id: 1, name: '充电器',price:100 ,number:1},
+  { id: 2, name: '手表' ,price:1000 ,number:1},
+];
+
+mock.onGet('/goods').reply(200, {
+  goods
+});
+
+axios.get('/goods').then(function (response) {
+  const  goodsList = useStore();
+  goodsList.goods = response.data.goods;
+});
+
+mock.onGet('/goods/edit').reply(config => {
+  const { id, number } = config.params;
+  goods.some(u => {
+    if (u.id === id) {
+      u.number = number;
+      return true;
+    }
+  });
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve([200, {
+        code: 200,
+        msg: '编辑成功'
       }]);
     }, 500);
   });
