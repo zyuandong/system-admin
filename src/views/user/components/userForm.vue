@@ -36,14 +36,14 @@ export default defineComponent({
     getTableData: { type: Function, required: true },
     isEdit: Boolean,
   },
-  setup(props, { emit, expose }) {
+  setup(props, { emit, expose, attrs }) {
     const dialogVisible = computed<boolean>(() => {
       return props.visible;
     });
     const tableForm = computed<any>(() => {
       return props.form;
     });
-
+    console.log(attrs);
     // const userForm = reactive({
     //   tableForm: props.form,
     // });

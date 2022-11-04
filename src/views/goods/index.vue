@@ -56,7 +56,7 @@ onMounted(() => {
       </el-table>
     </div>
     <div class="count">
-      <count ref="countApp" />
+      <count ref="countApp" class="countApp" />
     </div>
   </div>
 </template>
@@ -74,6 +74,9 @@ onMounted(() => {
   }
   .count {
     height: calc(100% - 80% - 0.32rem);
+  }
+  .countApp {
+    background-color: aquamarine;
   }
 }
 </style>
