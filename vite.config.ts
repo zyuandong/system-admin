@@ -8,9 +8,9 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 import { resolve } from 'path';
 
-const pathResolve = (dir) => {
-  return resolve(process.cwd(), '.', dir);
-};
+// const pathResolve = (dir) => {
+//   return resolve(process.cwd(), '.', dir);
+// };
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -30,7 +30,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': pathResolve('./src'),
+      // '@': pathResolve('./src'),
+      '@': resolve(__dirname, 'src'),
     },
   },
 });
