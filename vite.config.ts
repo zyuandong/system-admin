@@ -22,9 +22,11 @@ export default defineConfig({
       cache: false,
     }),
     AutoImport({
+      dts: 'types/auto-imports.d.ts',
       resolvers: [ElementPlusResolver()],
     }),
     Components({
+      dts: 'types/components.d.ts',
       resolvers: [ElementPlusResolver()],
     }),
   ],
