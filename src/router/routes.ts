@@ -4,23 +4,22 @@ export const routes: RouteRecordRaw[] = [
   {
     name: 'home',
     path: '/home',
-    component:() => import('@/views/home/index.vue')
+    component: () => import('@/views/home/index.vue'),
   },
   {
     name: 'goods',
     path: '/goods',
-    component:() => import('@/views/goods/index.vue')
+    component: () => import('@/views/goods/index.vue'),
   },
   {
     name: 'management',
     path: '/management',
-  
-    redirect:'/management/user',
-    children:[
+    redirect: '/management/user',
+    children: [
       {
-        path:'/management/user',
-        component:() => import('@/views/user/index.vue'),
-      }
-    ]
-  }
+        path: '/management/user',
+        component: () => import('@/views/user/index.vue'),
+      },
+    ],
+  },
 ];
