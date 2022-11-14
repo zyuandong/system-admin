@@ -1,8 +1,6 @@
 import mock from './config';
 import { Random } from 'mockjs';
 import type { Goods } from '@/types';
-import { useStore } from '@/store';
-import axios from 'axios';
 
 const totalCount = Random.integer(0, 10);
 
@@ -20,13 +18,6 @@ for (let i = 0; i < totalCount; i++) {
 export default () => {
   mock.onGet('/goods').reply(200, {
     goods,
-  });
-
-  axios.get('/goods').then(function (response) {
-    console.log(response.data.goods);
-
-    const goodsList = useStore();
-    goodsList.goods = response.data.goods;
   });
 
   mock.onGet('/goods/edit').reply((config) => {

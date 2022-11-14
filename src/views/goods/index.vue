@@ -1,18 +1,19 @@
 <script setup lang="ts">
 import { Goods } from '@/types';
 import axios from 'axios';
-import { useStore } from '@/store/index';
+// import { useStore } from '@/store/index';
 import { onMounted, ref } from 'vue';
 import count from './components/count.vue';
+
 const handleAdd = (row: Goods) => {
-  axios.get('/goods/edit', { params: row.number++ }).then((res) => {
-    console.log(res);
+  axios.get('/goods/edit', { params: row.number++ }).then(() => {
+    // console.log(res);
     countApp.value.add(row);
   });
 };
 const handleReduce = (row: Goods) => {
-  axios.get('/goods/edit', { params: row.number-- }).then((res) => {
-    console.log(res);
+  axios.get('/goods/edit', { params: row.number-- }).then(() => {
+    // console.log(res);
     countApp.value.reduce(row);
   });
 };
@@ -20,14 +21,16 @@ const handleReduce = (row: Goods) => {
 const tableData = ref<Goods[]>([]);
 
 const getTableData = () => {
-  const goodsData = useStore();
-  tableData.value = goodsData.goods;
+  axios.get('/goods').then(function (response) {
+    tableData.value = response.data.goods;
+  });
 };
+
 const countApp = ref();
 onMounted(() => {
   getTableData();
 
-  console.log(countApp.value);
+  // console.log(countApp.value);
 });
 </script>
 
