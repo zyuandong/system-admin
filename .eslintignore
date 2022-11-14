@@ -1,1 +1,1 @@
-types/*.d.ts
+src/**/*.d.ts
