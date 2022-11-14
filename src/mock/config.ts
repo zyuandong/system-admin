@@ -1,7 +1,7 @@
 import axios from 'axios';
 import mockAdapter from 'axios-mock-adapter';
 import { useStore } from '@/store/index';
-import type { User, Good } from '@/types/index';
+import type { User, Goods } from '@/types/index';
 
 // This sets the mock adapter on the default instance
 const mock = new mockAdapter(axios);
@@ -90,7 +90,7 @@ mock.onGet('/user/remove').reply((config) => {
   });
 });
 
-const goods: Good[] = [
+const goods: Goods[] = [
   { id: '1', name: '充电器', price: 100, number: 1 },
   { id: '2', name: '手表', price: 1000, number: 1 },
 ];

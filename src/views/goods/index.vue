@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import { Good } from '@/types';
+import { Goods } from '@/types';
 import axios from 'axios';
 import { useStore } from '@/store/index';
 import { onMounted, ref } from 'vue';
 import count from './components/count.vue';
-const handleAdd = (row: Good) => {
+const handleAdd = (row: Goods) => {
   axios.get('/goods/edit', { params: row.number++ }).then((res) => {
     console.log(res);
     countApp.value.add(row);
   });
 };
-const handleReduce = (row: Good) => {
+const handleReduce = (row: Goods) => {
   axios.get('/goods/edit', { params: row.number-- }).then((res) => {
     console.log(res);
     countApp.value.reduce(row);
   });
 };
 
-const tableData = ref<Good[]>([]);
+const tableData = ref<Goods[]>([]);
 
 const getTableData = () => {
   const goodsData = useStore();

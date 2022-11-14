@@ -11,7 +11,7 @@ export declare interface User extends Base {
   address: string;
 }
 
-export declare interface Good extends Base {
+export declare interface Goods extends Base {
   name: string;
   price: number;
   number: number;
