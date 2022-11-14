@@ -6,7 +6,7 @@ import { createPinia } from 'pinia';
 import '@/styles/index.scss';
 import router from './router';
 
-import '@/mock/config';
+import '@/mock';
 
 const app = createApp(App);
 const pinia = createPinia();
