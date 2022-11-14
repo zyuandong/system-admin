@@ -10,8 +10,8 @@ const mock = new mockAdapter(axios);
 // arguments for reply are (status, data, headers)
 
 let users: User[] = [
-  { id: 1, name: 'John Smith', address: '北京' },
-  { id: 2, name: 'Tom', address: '上海' },
+  { id: '1', name: 'John Smith', address: '北京' },
+  { id: '2', name: 'Tom', address: '上海' },
 ];
 mock.onGet('/users').reply(200, {
   users,
@@ -91,8 +91,8 @@ mock.onGet('/user/remove').reply((config) => {
 });
 
 const goods: Good[] = [
-  { id: 1, name: '充电器', price: 100, number: 1 },
-  { id: 2, name: '手表', price: 1000, number: 1 },
+  { id: '1', name: '充电器', price: 100, number: 1 },
+  { id: '2', name: '手表', price: 1000, number: 1 },
 ];
 
 mock.onGet('/goods').reply(200, {

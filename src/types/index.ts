@@ -1,5 +1,5 @@
 interface Base {
-  id?: number;
+  id?: string;
   createUser?: string;
   createTime?: string;
   updateUser?: string;

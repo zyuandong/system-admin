@@ -49,8 +49,9 @@
 import axios from 'axios';
 import { defineComponent, onMounted, reactive, ref, toRefs } from 'vue';
 import userForm from './components/userForm.vue';
-import type { User } from '@/apis/types';
+import type { User } from '@/types';
 import { ElMessageBox } from 'element-plus';
+
 export default defineComponent({
   components: {
     userForm,
@@ -99,7 +100,7 @@ export default defineComponent({
     };
     const handleCreate = () => {
       userForm.visibleUserForm = true;
-      userForm.form = { name: '' };
+      userForm.form = {} as User;
       userForm.isEdit = false;
     };
     onMounted(() => {

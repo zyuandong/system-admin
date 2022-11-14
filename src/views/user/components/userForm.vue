@@ -26,27 +26,25 @@
 <script lang="ts">
 import axios from 'axios';
 import { computed, defineComponent } from 'vue';
+import type { PropType } from 'vue';
+import type { User } from '@/types/index';
+
 export default defineComponent({
   emits: ['close'],
   props: {
     visible: Boolean,
     form: {
-      type: Object,
+      type: Object as PropType<User>,
     },
     getTableData: { type: Function, required: true },
     isEdit: Boolean,
   },
-  setup(props, { emit, expose, attrs }) {
+  setup(props, { emit, expose }) {
     const dialogVisible = computed<boolean>(() => {
       return props.visible;
     });
-    const tableForm = computed<any>(() => {
-      return props.form;
-    });
-    console.log(attrs);
-    // const userForm = reactive({
-    //   tableForm: props.form,
-    // });
+    const tableForm = computed(() => props.form as User);
+
     const handleClose = () => {
       emit('close', false);
     };
@@ -69,7 +67,6 @@ export default defineComponent({
     return {
       dialogVisible,
       handleClose,
-      // ...toRefs(userForm),
       handleSubmit,
       tableForm,
     };

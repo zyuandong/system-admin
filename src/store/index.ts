@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia';
-import {Goods} from '@/apis/types';
+import { Good } from '@/types';
 import { ref } from 'vue';
 
-export const useStore = defineStore('main',() => {
-  const goods = ref<Goods[]>([]);
+export const useStore = defineStore('main', () => {
+  const goods = ref<Good[]>([]);
   return { goods };
 });

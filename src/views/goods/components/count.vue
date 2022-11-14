@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { Goods } from '@/apis/types';
+import { Good } from '@/types';
 import { ref, useAttrs } from 'vue';
 const countTotal = ref(0);
 const priceTotal = ref(0);
-const add = (row: Goods) => {
+const add = (row: Good) => {
   countTotal.value = countTotal.value + 1;
   priceTotal.value = priceTotal.value + row.price;
 };
-const reduce = (row: Goods) => {
+const reduce = (row: Good) => {
   countTotal.value = countTotal.value - 1;
   priceTotal.value = priceTotal.value - row.price;
 };
