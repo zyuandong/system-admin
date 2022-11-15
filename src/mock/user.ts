@@ -16,10 +16,8 @@ for (let i = 0; i < totalCount; i++) {
 export default {
   userList: (name?: string) => {
     if (!name) {
-      return { users };
+      return users;
     }
-    return {
-      users: users.filter((item) => item.name === name),
-    };
+    return users.filter((item) => item.name === name);
   },
 };

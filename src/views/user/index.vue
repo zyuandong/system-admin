@@ -51,6 +51,7 @@ import { defineComponent, onMounted, reactive, ref, toRefs } from 'vue';
 import userForm from './components/userForm.vue';
 import type { User } from '@/types';
 import { ElMessageBox } from 'element-plus';
+import { getUserList } from '@/apis/user';
 
 export default defineComponent({
   components: {
@@ -79,9 +80,12 @@ export default defineComponent({
     };
     let test = ref();
     const getTableData = () => {
-      axios.get('/users').then((res) => {
-        tableData.value = res.data.users;
-      });
+      getUserList()
+        .then((res) => {
+          const { resultSet } = res.data.data;
+          tableData.value = resultSet;
+        })
+        .catch();
     };
     const handleDelete = (row: User) => {
       ElMessageBox.confirm('删除?', '提示', {
