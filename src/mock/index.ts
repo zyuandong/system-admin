@@ -37,4 +37,18 @@ mock.onGet('/user/remove').reply(200);
 /**
  * goods
  */
-mock.onGet('/goods').reply(200, { goods: goods.list() });
+mock.onGet(`${baseURL}/goods`).reply(200, {
+  data: {
+    metadata: {
+      filter: {},
+      paginationParam: {
+        page: 1,
+        pageSize: 10,
+        totalCount: 100,
+      },
+    },
+    resultSet: goods.list(),
+  },
+  errorCode: null,
+  userMessage: null,
+});

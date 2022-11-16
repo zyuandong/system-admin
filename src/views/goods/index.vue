@@ -4,6 +4,7 @@ import axios from 'axios';
 // import { useStore } from '@/store/index';
 import { onMounted, ref } from 'vue';
 import count from './components/count.vue';
+import { getGoodsList } from '@/apis/goods';
 
 const handleAdd = (row: Goods) => {
   axios.get('/goods/edit', { params: row.number++ }).then(() => {
@@ -21,9 +22,12 @@ const handleReduce = (row: Goods) => {
 const tableData = ref<Goods[]>([]);
 
 const getTableData = () => {
-  axios.get('/goods').then(function (response) {
-    tableData.value = response.data.goods;
-  });
+  getGoodsList()
+    .then((res) => {
+      const { resultSet } = res.data.data;
+      tableData.value = resultSet;
+    })
+    .catch();
 };
 
 const countApp = ref();
