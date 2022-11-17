@@ -46,12 +46,11 @@
   </div>
 </template>
 <script lang="ts">
-import axios from 'axios';
 import { defineComponent, onMounted, reactive, ref, toRefs } from 'vue';
 import userForm from './components/userForm.vue';
 import type { User } from '@/types';
-import { ElMessageBox } from 'element-plus';
-import { getUserList } from '@/apis/user';
+import { ElMessage, ElMessageBox } from 'element-plus';
+import { getUserList, deleteUser } from '@/apis/user';
 
 export default defineComponent({
   components: {
@@ -94,13 +93,17 @@ export default defineComponent({
         type: 'warning',
       })
         .then(() => {
-          axios.get('/user/remove', { params: { id: row.id } }).then(() => {
-            getTableData();
-          });
+          deleteUser(row)
+            .then(() => {
+              ElMessage({
+                type: 'success',
+                message: '删除成功',
+              });
+              getTableData();
+            })
+            .catch();
         })
-        .catch(() => {
-          //
-        });
+        .catch();
     };
     const handleCreate = () => {
       userForm.visibleUserForm = true;

@@ -32,7 +32,15 @@ mock
 
 mock.onGet('/user/edit').reply(200);
 mock.onGet('/user/add').reply(200);
-mock.onGet('/user/remove').reply(200);
+
+const pathRegex = new RegExp(`${baseURL}/user/\\S+`);
+mock.onDelete(pathRegex).reply(200);
+
+// TODO
+/**
+ * - 处理 500
+ * - 再次调用 /users 时，更新数据
+ */
 
 /**
  * goods
