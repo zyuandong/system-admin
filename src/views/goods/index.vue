@@ -63,8 +63,8 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 #goods {
-  height: calc(100vh - 0.6rem);
-  min-height: calc(7.68rem - 0.6rem);
+  height: 100%;
+  // min-height: calc(7.68rem - 0.6rem);
 
   .table-container {
     height: 80%;

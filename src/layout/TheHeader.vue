@@ -13,20 +13,7 @@ export default defineComponent({
       <span>ui系统</span>
     </div>
     <div class="center">
-      <el-menu
-        :default-active="$route.path"
-        mode="horizontal"
-        :ellipsis="false"
-        router
-      >
-        <el-menu-item index="/home">首页</el-menu-item>
-        <el-menu-item index="/goods">商品管理</el-menu-item>
-        <el-sub-menu index="/management">
-          <template #title>管理</template>
-          <el-menu-item index="/management/org">org管理</el-menu-item>
-          <el-menu-item index="/management/user">用户管理</el-menu-item>
-        </el-sub-menu>
-      </el-menu>
+      
     </div>
     <div class="right"></div>
   </div>

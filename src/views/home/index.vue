@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>9999</div>
+  <div>Home</div>
 </template>
