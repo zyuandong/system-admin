@@ -2,37 +2,36 @@
   <div id="user">
     <div class="left">left</div>
     <div class="right">
-      <div>
-        <div class="btn">
-          <el-button type="primary" plain @click="handleCreate">新增</el-button>
-        </div>
-        <div class="table-container">
-          <el-table :data="tableData" style="width: 100%">
-            <el-table-column type="index" label="Index" width="180" />
-            <el-table-column prop="name" label="Name" width="180" />
-            <el-table-column prop="address" label="Address" />
-            <el-table-column fixed="right" label="Operations" width="120">
-              <template #default="{ row }">
-                <el-button
-                  link
-                  type="primary"
-                  size="small"
-                  @click="handleDelete(row)"
-                  >删除</el-button
-                >
-                <el-button
-                  link
-                  type="primary"
-                  size="small"
-                  @click="handleEdit(row)"
-                  >修改</el-button
-                >
-              </template>
-            </el-table-column>
-          </el-table>
-        </div>
+      <div class="btn">
+        <el-button type="primary" plain @click="handleCreate">新增</el-button>
+      </div>
+      <div class="table-container">
+        <el-table height="100%" :data="tableData">
+          <el-table-column type="index" label="Index" width="180" />
+          <el-table-column prop="name" label="Name" width="180" />
+          <el-table-column prop="address" label="Address" />
+          <el-table-column fixed="right" label="Operations" width="120">
+            <template #default="{ row }">
+              <el-button
+                link
+                type="primary"
+                size="small"
+                @click="handleDelete(row)"
+                >删除</el-button
+              >
+              <el-button
+                link
+                type="primary"
+                size="small"
+                @click="handleEdit(row)"
+                >修改</el-button
+              >
+            </template>
+          </el-table-column>
+        </el-table>
       </div>
     </div>
+
     <!-- 修改表单 -->
     <userForm
       ref="test"
@@ -131,24 +130,26 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 #user {
-  height: calc(100vh - 0.6rem);
-  min-height: calc(7.68rem - 0.6rem);
-
+  height: 100%;
   display: flex;
+
   .left {
     width: 200px;
     height: 100%;
     background: #fff;
+    margin-right: 0.16rem;
+    overflow: auto;
   }
   .right {
     flex: 1;
+    overflow: hidden;
     background: #fff;
-    margin: 0.16rem;
     .btn {
       margin: 0.16rem 0.16rem 0;
       text-align: end;
     }
     .table-container {
+      height: calc(100% - 0.16rem - 0.32rem - 0.32rem);
       margin: 0.16rem;
     }
   }
